@@ -26,3 +26,12 @@ class Polynomials:
         # For now Assuming The Polynomials consist of the same variable
         Poly_res = Polynomials(coeff_res,degree_res,p1.x)
         return Poly_res
+
+    def eval(self, a):
+        y_val = 0
+        for i in range(self.degree, -0, -1):
+            y_val += self.coeff[i]
+            y_val *= a
+        y_val += self.coeff[0]
+        return y_val
+
