@@ -6,7 +6,7 @@ class Polynomials:
         self.coeff = coeff
         self.x = symb
         self.degree  =degree
-    def genPoly(self):
+    def genPoly(self): # Function To Generate Polynomial Expression
         self.Polynomial = f'{self.coeff[0]}'
         for i in range(1,len(self.coeff)):
             if self.coeff[i]:
@@ -34,4 +34,17 @@ class Polynomials:
             y_val *= a
         y_val += self.coeff[0]
         return y_val
+    def __mul__(self,other):
+        degree_res = self.degree + other.degree
+        coeff_res = [0]*(degree_res+1)
+        i =0
+        while  i <= self.degree:
+            j =0
+            while j <= other.degree:
+                coeff_res[i+j]+=self.coeff[i]*other.coeff[j]
+                j +=1
+            i +=1
+        Poly =  Polynomials(coeff_res,degree_res,'x')
+        return POly
+
 
