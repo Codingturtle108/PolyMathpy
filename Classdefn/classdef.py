@@ -45,6 +45,6 @@ class Polynomials:
                 j +=1
             i +=1
         Poly =  Polynomials(coeff_res,degree_res,'x')
-        return POly
+        return Poly
 
 
