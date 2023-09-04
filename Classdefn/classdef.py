@@ -1,3 +1,4 @@
+from helperfunctions import super_script
 class Polynomials:
     def __init__(self,coeff,degree,symb):
         if len(coeff) != degree +1:
@@ -11,9 +12,9 @@ class Polynomials:
         for i in range(1,len(self.coeff)):
             if self.coeff[i]:
                 if self.coeff[i] ==1:
-                    self.Polynomial += f'+{self.x}**{i}'
+                    self.Polynomial += f'+{self.x}{super_script(i)}'
                 else:
-                    self.Polynomial += f'+{self.coeff[i]}{self.x}**{i}'
+                    self.Polynomial += f'+{self.coeff[i]}{self.x}{super_script(i)}'
         return self.Polynomial
     def __add__(p1, p2): #Adding Add Operation In Polynomial Class
         # Assuming Degree to Be Same
