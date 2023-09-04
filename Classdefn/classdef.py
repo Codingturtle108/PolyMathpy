@@ -51,7 +51,7 @@ class Polynomials:
                     coeff_res[i+j]+=self.coeff[i]*other.coeff[j]
                     j +=1
                 i +=1
-            Poly =  Polynomials(coeff_res,degree_res,self.x)
-            return Poly
+            poly =  Polynomials(coeff_res,degree_res,self.x)
+            return poly
 
 
